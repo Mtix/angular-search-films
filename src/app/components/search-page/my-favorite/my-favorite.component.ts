@@ -64,8 +64,12 @@ export class MyFavoriteComponent implements OnInit {
     });
 
     this.storageService.setState(state);
-    this.clearList();
-    this.getFilms();
+
+    this.favoriteFilms.map((item, index) => {
+      if (item.imdbID === id) {
+        this.favoriteFilms.splice(index, 1);
+      }
+    });
   }
 
 }
