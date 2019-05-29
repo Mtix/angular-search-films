@@ -1,0 +1,14 @@
+<mat-card class="my-favorite-item-card">
+  <div class="image" *ngIf="film?.poster">
+    <img [src]="film?.poster" height="50" alt="" />
+  </div>
+  <div class="title">
+    <a [routerLink]="'/film/' + film.imdbID">{{film?.title}}</a>
+  </div>
+  <div class="year">{{film?.released}}</div>
+  <div class="runtime">{{film?.runtime}}</div>
+  <div class="country">{{film?.country}}</div>
+  <button mat-mini-fab color="primary" (click)="delete(film.imdbID)">
+      <mat-icon aria-label="close">close</mat-icon>
+  </button>
+</mat-card>

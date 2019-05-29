@@ -1,0 +1,21 @@
+<div class="search-input-wrapper">
+  <mat-card class="search-input-card">
+      <form class="search-form">
+          <mat-form-field class="search-input">
+            <input matInput placeholder="Film name..." [matAutocomplete]="auto" [formControl]="searchInput">
+            <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let film of searchResult.films">
+                  <a [routerLink]="'/film/' + film.imdbID" class="result-line">
+                    <div>
+                      {{film.title}}
+                    </div>
+                    <div class="poster" *ngIf="film.poster">
+                      <img class="example-option-img" aria-hidden height="40" [src]="film.poster" />
+                    </div>
+                  </a>
+                </mat-option>
+              </mat-autocomplete>
+          </mat-form-field>
+        </form>
+  </mat-card>
+</div>

@@ -1,0 +1,23 @@
+.search-input-wrapper {
+    margin-bottom: 30px;
+    .search-form {
+        display: flex;
+        align-items: center;
+        .search-input {
+            flex-grow: 1;
+        }
+        button {
+            margin-left: 20px;
+        }
+    }
+}
+
+.result-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.poster {
+    display: flex;
+}

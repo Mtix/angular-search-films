@@ -1,0 +1,32 @@
+<div class="film-card-wrapper">
+    <mat-card class="film-item-card" *ngIf="filmInfo && filmInfo.imdbID">
+      <a mat-raised-button (click)="back()" class="btn-back"><<< Back</a>
+      <button
+        mat-raised-button
+        color="primary"
+        class="save-btn"
+        (click)="save()"
+        [disabled]="favoriteFilm"
+      >Save in my favorite</button>
+      <mat-card-title>
+        <div>{{filmInfo?.title}}</div>
+        <div>imdb: {{filmInfo?.imdbRating}}</div>
+      </mat-card-title>
+      <div class="card-info">
+        <div class="image">
+          <img [src]="filmInfo?.poster" alt="" width="200" />
+        </div>
+        <div class="film-info">
+          <div class="info-item"><b>Actors:</b> {{filmInfo?.actors}}</div>
+          <div class="info-item"><b>Awards:</b> {{filmInfo?.awards}}</div>
+          <div class="info-item"><b>Country:</b> {{filmInfo?.country}}</div>
+          <div class="info-item"><b>Director:</b> {{filmInfo?.director}}</div>
+          <div class="info-item"><b>Genre:</b> {{filmInfo?.genre}}</div>
+          <div class="info-item"><b>Language:</b> {{filmInfo?.language}}</div>
+          <div class="info-item"><b>Production:</b> {{filmInfo?.production}}</div>
+          <div class="info-item"><b>Released:</b> {{filmInfo?.released}}</div>
+          <div class="info-item"><b>Runtime:</b> {{filmInfo?.runtime}}</div>
+        </div>
+      </div>
+    </mat-card>      
+</div>

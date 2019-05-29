@@ -1,0 +1,23 @@
+.film-card-wrapper {
+    padding: 20px;
+    mat-card-title {
+        margin-bottom: 25px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .save-btn {
+        margin-left: 10px;
+    }
+    .btn-back {
+        margin-bottom: 40px;
+    }
+    .image {
+        margin-right: 20px;
+    }
+    .card-info {
+        display: flex;
+    }
+    .info-item {
+        margin-bottom: 10px;
+    }
+}

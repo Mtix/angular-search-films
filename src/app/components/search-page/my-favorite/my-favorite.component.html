@@ -1,0 +1,10 @@
+<div class="my-favorite-wrapper">
+    <mat-card class="search-result-card">
+      <mat-card-title>Favorite films: {{getCount}}</mat-card-title>
+      <div class="my-favorite-items">
+        <div *ngFor="let film of favoriteFilms">
+          <app-my-favorite-item [film]="film" (deleteFilm)="delete($event)"></app-my-favorite-item>
+        </div>
+      </div>
+    </mat-card>
+  </div>

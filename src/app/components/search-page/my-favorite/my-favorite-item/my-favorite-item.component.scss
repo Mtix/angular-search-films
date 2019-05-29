@@ -1,0 +1,11 @@
+.my-favorite-item-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.mat-card {
+    padding: 10px;
+    border-radius: 0;
+}
